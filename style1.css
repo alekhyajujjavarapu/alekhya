@@ -1,0 +1,58 @@
+body {
+          font-family: "Manrope", sans-serif;
+          display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: url('https://i.pinimg.com/564x/db/c8/6c/dbc86c388c9155df8b0f9fec7ffba01c.jpg'); /* Set background image */
+            background-size: cover;
+            background-position: center;
+        }
+        header {
+            background-color: #edc3e2;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-bottom: 20px;
+          }
+        .container {
+            max-width: 400px;
+            padding-left: 30px;
+            padding-right:40px;
+            margin-top: 60px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            
+            
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #ffce9b98;
+            color: #161616;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .btn:hover {
+            background-color: #e367d8;
+        }
+        .forgot-password {
+            display: block;
+            text-align: right;
+            margin-top: 10px;
+        }

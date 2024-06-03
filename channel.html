@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style2.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    <title>Join Channel Form</title>
+</head>
+<body>
+    <header>
+      <h1>Let me know more about you...</h1>
+    </header>
+
+    <h2>Enter your details, please :) </h2>
+
+    <form id="joinForm">
+        <label for="first-name">First Name:</label>
+        <input type="text" id="first-name" name="first-name" required>
+
+        <label for="last-name">Last Name:</label>
+        <input type="text" id="last-name" name="last-name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="home-town">Home Town:</label>
+        <input type="text" id="home-town" name="home-town" required>
+
+        <label for="country">Country:</label>
+        <input type="text" id="country" name="country" required>
+
+        <label for="interest-type">What captures your interest the most?</label>
+        <select id="interest-type" name="interest-type" required>
+          <option value="" disabled selected>Select your interest</option>
+            <option value="Books">Books</option>
+            <option value="Art">Art</option>
+            <option value="Vacations">Vacations</option>
+            <option value="Slow life">Slow life</option>
+            <option value="Animation">Animation</option>
+        </select>
+
+        <button type="submit">Join Channel</button>
+    </form>
+
+    <script>
+        document.getElementById('joinForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the default form submission
+            window.location.href = 'Homepage.html'; // Redirect to the thank you page
+        });
+    </script>
+</body>
+</html>
