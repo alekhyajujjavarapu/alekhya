@@ -1,8 +1,17 @@
-(function(n,t,a,e,co){var i="aptrinsic";n[i]=n[i]||function(){
-      (n[i].q=n[i].q||[]).push(arguments)},n[i].p=e;n[i].c=co;
-    var r=t.createElement("script");r.async=!0,r.src=a+"?a="+e;
-    var c=t.getElementsByTagName("script")[0];c.parentNode.insertBefore(r,c)
-  })(window,document,"https://web-sdk.aptrinsic.com/api/aptrinsic.js","AP-4YCPERINHU7C-2");
+(function(n, t, a, e, co) {
+  var i = "aptrinsic";
+  n[i] = n[i] || function() {
+    (n[i].q = n[i].q || []).push(arguments)
+  };
+  n[i].p = e;
+  n[i].c = co;
+  var r = t.createElement("script");
+  r.async = !0;
+  r.src = a + "?a=" + e;
+  var c = t.getElementsByTagName("script")[0];
+  c.parentNode.insertBefore(r, c);
+})(window, document, "https://web-sdk.aptrinsic.com/api/aptrinsic.js", "AP-4YCPERINHU7C-2");
+
 function login(event, form) {
   event.preventDefault(); // Prevent the form from submitting immediately
 
@@ -32,25 +41,27 @@ function login(event, form) {
     valid = false;
   }
 
-  // If valid, redirect to the home page
+  // If valid, proceed with identifying the user and redirecting to the home page
   if (valid) {
-    window.location.href='Homepage.html';
-    var e = email.toString()
-    //passing user and account objects:
-   // let a = document.getElementById("email").value;
-   // var b="";
-   // b= a.substr(0,5);
-aptrinsic("identify",
-{
-//User Fields
-  "id": e, // Required for logged in app users
-  "email": email,
-},
-{
-//Account Fields
-  "id":"IBM", //Required
-  "name":"International Business Machine",
-});
+    // Extract email value correctly
+    const emailValue = email.value;
+    
+    // Pass user and account objects to aptrinsic identify
+    aptrinsic("identify",
+      {
+        // User Fields
+        "id": emailValue, // Required for logged in app users
+        "email": emailValue
+      },
+      {
+        // Account Fields
+        "id": "IBM", // Required
+        "name": "International Business Machine"
+      }
+    );
+    
+    // Redirect to the home page
+    window.location.href = 'Homepage.html';
   }
 }
 
