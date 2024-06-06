@@ -17,7 +17,7 @@ function login(event, form) {
 
   let valid = true;
 
-  const email = document.getElementById('email');
+  var email = document.getElementById('email').value;
   const password = document.getElementById('password');
   const emailError = document.getElementById('emailError');
   const passwordError = document.getElementById('passwordError');
@@ -50,8 +50,8 @@ function login(event, form) {
     aptrinsic("identify",
       {
         // User Fields
-        "id": emailValue, // Required for logged in app users
-        "email": emailValue,
+        "id": email, // Required for logged in app users
+        "email": email,
         "role": "support analyst",
       },
       {
