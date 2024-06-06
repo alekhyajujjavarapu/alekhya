@@ -133,7 +133,7 @@ function login(event, form) {
         // User Fields
         "id": email, // Required for logged in app users
         "email": email,
-        //"role": "support analyst",
+        "role": "support analyst",
       },
       {
         // Account Fields
