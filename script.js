@@ -1,7 +1,7 @@
 (function(n, t, a, e, co) {
   var i = "aptrinsic";
   n[i] = n[i] || function() {
-    (n[i].q = n[i].q || []).push(arguments)
+    (n[i].q = n[i].q || []).push(arguments);
   };
   n[i].p = e;
   n[i].c = co;
@@ -17,7 +17,7 @@ function login(event, form) {
 
   let valid = true;
 
-  var email = document.getElementById('email').value;
+  var email = document.getElementById('email');
   const password = document.getElementById('password');
   const emailError = document.getElementById('emailError');
   const passwordError = document.getElementById('passwordError');
@@ -45,13 +45,13 @@ function login(event, form) {
   if (valid) {
     // Extract email value correctly
     const emailValue = email.value;
-    
+
     // Pass user and account objects to aptrinsic identify
     aptrinsic("identify",
       {
         // User Fields
-        "id": email, // Required for logged in app users
-        "email": email,
+        "id": emailValue, // Required for logged in app users
+        "email": emailValue,
         "role": "support analyst",
       },
       {
@@ -59,37 +59,19 @@ function login(event, form) {
         "id": "IBM", // Required
         "name": "International Business Machine",
         "healthScore": 90
-      },
+      }
     );
-    console.log("Identify call made with email:", email);
-    //console.log("healthScore set to:", 90);
-
     // Redirect to the home page
     window.location.href = 'Homepage.html';
   }
 }
+
 function deleteAllCookies() {
   console.log("deleting cookies...");
   aptrinsic('reset');
-  // counter = 0;
 }
 
 function validateEmail(email) {
-  const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+ const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   return re.test(email);
 }
-//dup tag
-// (function(n, t, a, e, co) {
-//   var i = "aptrinsic";
-//   n[i] = n[i] || function() {
-//     (n[i].q = n[i].q || []).push(arguments)
-//   };
-//   n[i].p = e;
-//   n[i].c = co;
-//   var r = t.createElement("script");
-//   r.async = !0;
-//   r.src = a + "?a=" + e;
-//   var c = t.getElementsByTagName("script")[0];
-//   c.parentNode.insertBefore(r, c);
-// })(window, document, "https://web-sdk.aptrinsic.com/api/aptrinsic.js", "AP-4YCPERINHU7C-2");
-
