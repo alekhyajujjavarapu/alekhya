@@ -44,7 +44,7 @@ function login(event, form) {
   // If valid, proceed with identifying the user and redirecting to the home page
   if (valid) {
     // Extract email value correctly
-    const emailValue = email.value;
+    var emailValue = email.value;
 
     // Pass user and account objects to aptrinsic identify
     aptrinsic("identify",
@@ -63,15 +63,14 @@ function login(event, form) {
     );
     // Redirect to the home page
     window.location.href = 'Homepage.html';
+    alert("Logged in user id :");
   }
 }
-
-function deleteAllCookies() {
-  console.log("deleting cookies...");
-  aptrinsic('reset');
-}
-
 function validateEmail(email) {
  const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   return re.test(email);
+}
+function deleteAllCookies() {
+  console.log("deleting cookies...");
+  aptrinsic('reset');
 }
