@@ -1,0 +1,62 @@
+*{
+  margin:0;
+  padding:0;
+}
+#extrainfoOne{
+  display:none;
+}
+.visitorbody{
+  background-image: url("bg4.jpg");
+  background-repeat: no-repeat;
+  background-position: fixed;
+  background-size:cover;
+  opacity:0.8;
+}
+.navbar{
+  font-size: 20px;
+}
+h1{
+  color:#16c79a;
+  text-align: center;
+}
+.navbar-brand.font-weight-bold{
+  color:#16c79a;
+}
+.col-lg-4.p-5{
+  border-radius: 15px;
+}
+
+.draggable{
+  height:30px;
+  width:30%;
+
+}
+#dropTarget{
+  height:300px;
+  width:100%;
+  text-align: center;
+  border: solid 3px;
+  display: flex;
+flex-wrap: wrap;
+}
+.dropheading{
+  display: grid;
+place-items: center;
+}
+
+/* styles.css */
+.tile {
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin: 10px;
+  width: 200px;
+  float: left;
+}
+
+.tile button {
+  margin-bottom: 10px;
+}
+
+.task-options {
+  display: none;
+}
