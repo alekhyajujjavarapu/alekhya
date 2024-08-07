@@ -65,6 +65,7 @@ function login(event, form) {
     window.location.href = 'Homepage.html';
     alert("Logged in user id :");
   }
+  aptrinsic('track', 'loginerror', {"name":emailError.textContent});
 }
 function validateEmail(email) {
  const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
