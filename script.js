@@ -78,15 +78,5 @@ function deleteAllCookies() {
 // Get the toggle input and label
 const toggleSwitch = document.getElementById('toggleSwitch');
 const toggleLabel = document.getElementById('toggleLabel');
-
-// Event listener to handle toggle state changes
-toggleSwitch.addEventListener('change', function() {
-    if (toggleSwitch.checked) {
-        toggleLabel.textContent = 'True';
-    } else {
-        toggleLabel.textContent = 'False';
-    }
-});
-
       
    
